@@ -13,14 +13,19 @@ const Login = () => {
 
     const onSubmit = (e) => {
         e.preventDefault()
+
+
+        }
+
+        const loginUser = {
+            email: userInput.email,
+            password: userInput.password
+        }
+
+        console.log(loginUser)
     }
 
-    const loginUser => {
-        email: userInput.email,
-        password: userInput.password
-    }
 
-    }
     return (
         <div className={"register"}>
             <div className={"container"}>
@@ -28,10 +33,10 @@ const Login = () => {
                     <div className={"col-md-8 m-auto"}>
                         <h1 className={"display-4 text-center"}>Login</h1>
                         <p className={"lead text-center"}>
-                            You Can Login Here
+                            You can Login Here
                         </p>
 
-                        <form onSubmit={onsubmit}>
+                        <form onSubmit={onSubmit}>
                             <div className={"form-group"}>
                                 <input
                                     type={"email"}
@@ -39,7 +44,7 @@ const Login = () => {
                                     placeholder={"Email"}
                                     name={"email"}
                                     value={userInput.email}
-                                    onChange={onchange('email')}
+                                    onChange={onChange('email')}
                                 />
                             </div>
                             <div className={"form-group"}>
@@ -49,7 +54,7 @@ const Login = () => {
                                     placeholder={"Password"}
                                     name={"password"}
                                     value={userInput.password}
-                                    onChange={onchange('password')}
+                                    onChange={onChange('password')}
                                 />
                             </div>
                             <input
